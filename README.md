@@ -14,7 +14,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many  :messages
 - has_many  :users,  through:  :users_groups
@@ -23,7 +23,6 @@
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group  _id|integer|null: false, foreign_key: true|
 ### Association
@@ -35,7 +34,7 @@
 |------|----|-------|
 |body|string|null: false|
 |image|string||
-|message_time|integer|null: false|
+|message_time|integer||
 |user_id|integer|null: false, foreign_key: true|
 |group  _id|integer|null: false, foreign_key: true|
 ### Association
