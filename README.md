@@ -32,7 +32,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|string|null: false|
+|body|string||
 |image|string||
 |message_time|integer||
 |user_id|integer|null: false, foreign_key: true|
