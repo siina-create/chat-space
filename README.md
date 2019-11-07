@@ -11,6 +11,13 @@
 - has_many  :chats
 - has_many  :groups,  through:  :users_groups
 
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_name|string|null: false|
 
+### Association
+- has_many  :chats
+- has_many  :users,  through:  :users_groups
 
 
