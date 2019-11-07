@@ -31,5 +31,23 @@
 - belongs_to :user
 - belongs_to :group
 
+## chatsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|chat|string|null: false|
+|image|string||
+|chat_time|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group  _id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+
+
+
+
+
 
 
