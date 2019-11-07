@@ -34,7 +34,6 @@
 |------|----|-------|
 |body|string||
 |image|string||
-|message_time|integer||
 |user_id|integer|null: false, foreign_key: true|
 |group  _id|integer|null: false, foreign_key: true|
 ### Association
