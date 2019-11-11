@@ -1,16 +1,17 @@
-.side_header
-  .main_header__name
-    田中
-  .side_header__icon
-    = link_to '#',class: "header__icon--kami" do
-      = icon 'fas','edit'
-      %span<>
-    = link_to'#',class: "header__icon--haguruma" do
-      = icon'fas','cog'
-.side_contents
-  .side_contents__group
-    test1
-    .side_contents__group--message
+.side
+  .side-header
+    .side-header__name
+      田中
+    .side-header__icon
+      = link_to '#',class: "header__icon--kami" do
+        = icon 'fas','edit',class: "icon-color"
+        %span<>
+      = link_to'#',class: "header__icon--haguruma" do
+        = icon'fas','cog',class: "icon-color"
+  .side-contents
+    .side-contents__name
+      test1
+    .side-contents__message
       まだメッセージはありません
     
   
