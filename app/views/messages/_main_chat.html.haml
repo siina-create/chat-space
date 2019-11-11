@@ -1,0 +1,22 @@
+.main
+  .main-header
+    .main-header__left
+      group name
+      .main-header__left--member-list
+        Member
+    .main-header__edit-btn
+      Edit
+  .main-chat
+    .main-chat-all
+      .main-chat-all__name
+        syouta 
+        .main-chat-all__time
+          2019/10/08/14:39
+      .main-chat-all__letter
+        this is a first message
+  .main-form
+    .form
+      %input.input-textbox{name: "TEXT", placeholder: "text a message", type: "text", value: ""} 
+      %label.input-image
+        %input.imagechoice{type: "file",name: "image"}= icon('fas', 'image')
+    %input.input-send-btn{name: "send-btn", type: "submit", value: "SEND"}

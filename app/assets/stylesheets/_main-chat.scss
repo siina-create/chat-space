@@ -1,0 +1,89 @@
+$aqua:aqua;
+$grey:#434A54;
+.main-header{
+  border-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 300px);
+  height: 100px;
+  position: relative;
+  padding-left: 40px;
+  &__left{
+  flood-color: #333333;
+  margin-top: 35px;
+  font-size: 20px;
+    &--member-list{
+    margin-top: 15px;
+    font-size: 12px;
+    }
+  }
+  &__edit-btn{
+    border: thin solid $aqua;
+    color: $aqua;
+    position: absolute;
+    right: 80px;
+    top: 28px;
+    padding: 20px;
+    line-height: 100%;
+    
+  }
+}
+
+.main-chat{
+  background-color: #fafafa;
+  height: calc(100vh - 190px);
+    &-all{
+    padding-top: 46px;
+    padding-left: 40px;
+    &__name{
+      font-weight: bold;
+      font-size: 16px;
+      color: $grey;
+      display: flex;
+      .main-chat-all__time{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &__letter{
+      font-size: 14px;
+      color: $grey;
+      margin-top: 10px;
+    }
+  }
+}
+.input-textbox::placeholder{
+  padding-left: 10px;
+}
+.main-form{
+  width: calc(100vw - 340px);
+  padding: 20px 40px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  .form{
+  position: relative;
+    .input-textbox{
+      border: hidden;
+      height: 50px;
+      width: calc(100vw - 480px);
+    }
+    .input-image{
+      line-height: 50px;
+      position: absolute;
+      right: 25px;
+      .imagechoice{
+        display: none;
+      }
+    }
+  }
+  .input-send-btn{
+    height: 50px;
+    width: 100px;
+    background-color: #38AEF0;
+    color: #fff;
+    margin: 0 auto;
+  }
+}
+
