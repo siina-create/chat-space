@@ -1,0 +1,37 @@
+.irofont{
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.side-header {
+background-color: #253141;
+width: 260px;
+height: 100px;
+padding:0px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+  &__name{
+    @extend.irofont;
+    font-size: 16px;
+  }
+  &__icon{
+    .icon-color{
+      color: white;
+    }
+  }
+}
+.side-contents {
+background-color: #2f3e51;
+width: 260px;
+height: calc(100vh - 100px);
+padding:20px;
+  &__name{
+    @extend.irofont;
+    font-size: 15px;
+  }
+  &__message{
+    @extend.irofont;
+    font-size: 11px;
+  }
+  
+}
