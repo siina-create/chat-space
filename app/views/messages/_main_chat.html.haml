@@ -16,7 +16,7 @@
         this is a first message
   .main-form
     .form
-      %input.input-textbox{:name => "TEXT", :placeholder => "text a message", :type => "text", :value => ""} 
+      %input.input-textbox{name: "TEXT", placeholder: "text a message", type: "text", value: ""} 
       %label.input-image
-        %input.imagechoice{type: "file",:name => "image"}= icon('fas', 'image')
-    %input.input-send-btn{:name => "send-btn", :type => "submit", :value => "SEND"}
+        %input.imagechoice{type: "file",name: "image"}= icon('fas', 'image')
+    %input.input-send-btn{name: "send-btn", type: "submit", value: "SEND"}
