@@ -1,12 +1,12 @@
 .side
   .side-header
     .side-header__name
-      田中
+      = current_user.name
     .side-header__icon
       = link_to '#',class: "header__icon--kami" do
         = icon 'fas','edit',class: "icon-color"
         %span<>
-      = link_to'#',class: "header__icon--haguruma" do
+      = link_to edit_user_path(current_user),class: "header__icon--haguruma" do
         = icon'fas','cog',class: "icon-color"
   .side-contents
     .side-contents__name
