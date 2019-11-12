@@ -3,7 +3,7 @@
     .side-header__name
       = current_user.name
     .side-header__icon
-      = link_to '#',class: "header__icon--kami" do
+      = link_to new_group_path,class: "header__icon--kami" do
         = icon 'fas','edit',class: "icon-color"
         %span<>
       = link_to edit_user_path(current_user),class: "header__icon--haguruma" do
