@@ -1,0 +1,18 @@
+.flash-message-kyoutuu{
+text-align: center;
+width: 100vw;
+color: white;
+}
+
+
+
+.flash{
+  .notice{
+    @extend.flash-message-kyoutuu;
+    background-color: blue;
+  }
+  .alert{
+    @extend.flash-message-kyoutuu;
+    background-color: orange;
+  }
+}
