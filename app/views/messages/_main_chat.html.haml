@@ -4,8 +4,9 @@
       group name
       .main-header__left--member-list
         Member
-    .main-header__edit-btn
-      Edit
+      = link_to edit_group_path(current_user),class: "edit" do
+        .main-header__edit-btn
+          Edit
   .main-chat
     .main-chat-all
       .main-chat-all__name

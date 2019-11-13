@@ -9,10 +9,13 @@
       = link_to edit_user_path(current_user),class: "header__icon--haguruma" do
         = icon'fas','cog',class: "icon-color"
   .side-contents
-    .side-contents__name
-      test1
-    .side-contents__message
-      まだメッセージはありません
+    - current_user.groups.each do |group|
+      .content
+        = link_to group_messages_path(group) ,class:"content" do
+          .content__name
+            = group.name
+          .content__message
+            まだメッセージはありません
     
   
     

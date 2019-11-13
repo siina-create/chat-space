@@ -2,6 +2,9 @@ $aqua:aqua;
 $grey:#434A54;
 .main-header{
   border-color: #eeeeee;
+  overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
   display: flex;
   justify-content: space-between;
   width: calc(100vw - 300px);
@@ -31,6 +34,9 @@ $grey:#434A54;
 
 .main-chat{
   background-color: #fafafa;
+  overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
   height: calc(100vh - 190px);
     &-all{
     padding-top: 46px;
