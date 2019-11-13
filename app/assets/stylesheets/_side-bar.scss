@@ -23,15 +23,20 @@ align-items: center;
 .side-contents {
 background-color: #2f3e51;
 width: 260px;
-height: calc(100vh - 100px);
+height: calc(100vh - 140px);
 padding:20px;
-  &__name{
-    @extend.irofont;
+overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  .content{
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: white;
+    &__name{
     font-size: 15px;
-  }
-  &__message{
-    @extend.irofont;
+    }
+    &__message{
     font-size: 11px;
+    }
   }
-  
 }
