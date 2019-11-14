@@ -37,10 +37,10 @@ $grey:#434A54;
   overflow: scroll;
     overflow-x: scroll;
     overflow-y: scroll;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 270px);
+  padding: 46px 40px;
     &-all{
-    padding-top: 46px;
-    padding-left: 40px;
+    padding: 0 0 40px;
     &__name{
       font-weight: bold;
       font-size: 16px;
@@ -78,7 +78,7 @@ $grey:#434A54;
     .input-image{
       line-height: 50px;
       position: absolute;
-      right: 25px;
+      right: 125px;
       .imagechoice{
         display: none;
       }

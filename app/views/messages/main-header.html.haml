@@ -8,12 +8,18 @@
         .main-header__edit-btn
           Edit
   .main-chat
-    = render partial: 'message', collection: @messages
+    .main-chat-all
+      .main-chat-all__name
+        syouta 
+        .main-chat-all__time
+          2019/10/08/14:39
+      .main-chat-all__letter
+        this is a first message
   .main-form
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :body,class:"input-textbox",placeholder: "text a message"
         %label.input-image
-          = f.file_field :image,class:"imagechoice"
-          = icon'fas', 'image'
+          = f.file_field :image
+          = icon('fas', 'image')
         = f.submit"SEND",class:"input-send-btn"
