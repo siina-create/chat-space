@@ -1,19 +1,20 @@
 $(function(){
   function buildPost(post){
     image = (post.image) ? `<img class="message__image" src=${post.image}>`:"";
-      var html = `<div class="main-chat-all">
-    <div class="main-chat-all__name">
-    ${post.name}
-    <div class="main-chat-all__time">
-    ${post.created_at}
-    </div>
-    </div>
-    <div class="main-chat-all__letter">
-    <p class="lower-message__content"></p>
-    ${post.text}
-    </div>
-    ${image}
-    </div>`
+    
+    var html = `<div class="main-chat-all">
+                  <div class="main-chat-all__name">
+                    ${post.name}
+                    <div class="main-chat-all__time">
+                      ${post.created_at}
+                    </div>
+                  </div>
+                  <div class="main-chat-all__letter">
+                    <p class="lower-message__content"></p>
+                      ${post.text}
+                  </div>
+                    ${image}
+                </div>`
     
     return html;
     
