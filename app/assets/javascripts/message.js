@@ -58,9 +58,7 @@ $(function(){
       $('.main-chat').animate({ scrollTop: $('.main-chat')[0].scrollHeight});
       }
     })
-    .fail(function() {
-      console.log('error');
-    });
+    
   };
 
 
