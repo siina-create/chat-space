@@ -25,11 +25,6 @@ $(function(){
   };
 
 
-
-
-
-
-
   var reloadMessages = function() {//カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.main-chat-all:last').data('message-id')//ブラウザの最新メッセージのmessag-id取得
     
@@ -41,31 +36,26 @@ $(function(){
       dataType: 'json',
       //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
-      
     })
+
     .done(function(messages) {
       //if文配列messageが空の時以外に動くlength
       if(messages.length !== 0){
       //追加するHTMLの入れ物を作る
       var insertHTML = '';
-
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
       $(messages).each(function(index, message){
         insertHTML = buildMessageHTML(message)//メッセージが入ったHTMLを取得
         $('.main-chat').append(insertHTML)//メッセージを追加
-        
       })
       $('.main-chat').animate({ scrollTop: $('.main-chat')[0].scrollHeight});
       }
     })
-    
   };
 
 
-
   function buildPost(post){//jbuilderのjsonをpostにした記述をする
-    image = (post.image) ? `<img class="lower-message__image" src=${post.image}>`:"";
-    
+    image = (post.image) ? `<img class="lower-message__image" src=${post.image}>`:""; 
     var html = `<div class="main-chat-all" data-message-id=  ${post.id}>
                   <div class="main-chat-all__name">
                     ${post.user_name}
@@ -79,11 +69,10 @@ $(function(){
                   </div>
                     ${image}
                 </div>`
-    
-    return html;
-    
+    return html;  
   }
-  
+
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -97,14 +86,15 @@ $(function(){
       processData: false,//データの整形をOFFにする　formdataで取っている場合はこの２つを書くjqueryはデータを自動で整形する機能があるが
       contentType: false//formdataで送る場合は既に整形済みのため
     })
+
     .done(function(post){
-      
       var html = buildPost(post);
       $('.main-chat').append(html);
       $('.main-chat').animate({ scrollTop: $('.main-chat')[0].scrollHeight});
       $('#new_message')[0].reset();
       $('.input-send-btn').prop('disabled', false);
     })
+    
     .fail(function() {
       alert("メッセージ送信に失敗しました");
     });
