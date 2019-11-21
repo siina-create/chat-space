@@ -1,10 +1,11 @@
-.main-chat-all
+.main-chat-all{data: {message_id: message.id}}
   .main-chat-all__name
     = message.user.name
     .main-chat-all__time
       = message.created_at.strftime("%Y/%m/%d %H:%M")
   .main-chat-all__letter
     - if message.body.present?
-      %p.lower-message__content
-    = message.body
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+      .lower-message__content
+        = message.body
+      .lower-message__image
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
