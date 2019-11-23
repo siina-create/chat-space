@@ -97,6 +97,7 @@ $(function(){
     
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.input-send-btn').prop('disabled', false);
     });
   })
   //メッセージ画面でのみ７秒ごとに自動更新
